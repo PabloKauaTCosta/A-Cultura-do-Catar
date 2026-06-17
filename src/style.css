@@ -115,24 +115,25 @@ p {
   gap: 15px !important; /* Dá um espaço limpo entre os links */
 }
 
-/* Quando abrir no celular (telas menores que 768px) */
-@media (max-width: 768px) {
-  .topbar-overlay {
-    flex-direction: column !important; /* Empilha a logo em cima e os links embaixo */
-    gap: 15px !important;              /* Espaço entre a logo e os links */
-    text-align: center !important;
-  }
-  .topbar-overlay .nav {
-    justify-content: center !important; /* Centraliza os links no meio da tela do celular */
-    flex-wrap: wrap !important;         /* Se faltar espaço no celular, eles descem organizados */
-  }
-}
-
-/* #app {
+#app {
   width: min(1240px, calc(100% - 32px));
   margin: 0 auto;
   padding: 20px 0 28px;
-} */
+}
+
+@media (max-width: 720px) {
+  #app {
+    width: min(100% - 18px, 1240px);
+    padding: 10px 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #app {
+    width: 100%;
+    padding: 8px 0 12px;
+  }
+}
 
 .topbar {
   position: sticky;
