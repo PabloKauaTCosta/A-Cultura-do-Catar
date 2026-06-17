@@ -21,7 +21,7 @@
   --radius-sm: 12px;
   --heading: 'Cinzel', Georgia, serif;
   --body: 'Manrope', 'Segoe UI', sans-serif;
-  
+ 
   font: 16px/1.65 var(--body);
   color: var(--ink);
   background:
@@ -404,6 +404,7 @@ main {
 .media-card,
 .food-card,
 .tour-card,
+.tour-card,
 .map-card,
 .gallery-item,
 .glass-card {
@@ -774,20 +775,20 @@ main {
   .footer {
     grid-template-columns: 1fr;
   }
-  
+ 
   .topbar {
     border-radius: 28px;
     align-items: flex-start;
   }
-  
+ 
   .hero-section {
     padding-bottom: 30px;
   }
-  
+ 
   .about-image-card img {
     min-height: 420px;
   }
-  
+ 
   .stats-strip,
   .three-up,
   .tourism-grid,
@@ -801,40 +802,40 @@ main {
     width: min(100% - 18px, 1240px);
     padding-top: 10px;
   }
-  
+ 
   .topbar,
   .hero-section,
   .section,
   .footer {
     border-radius: 24px;
   }
-  
+ 
   .topbar {
     position: static;
     gap: 14px;
   }
-  
+ 
   main {
     padding-top: 0;
   }
-  
+ 
   .nav {
     justify-content: flex-start;
     gap: 10px 14px;
   }
-  
+ 
   .hero-section,
   .section,
   .footer {
     padding: 18px;
   }
-  
+ 
   .quiz-header,
   .map-meta li {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+ 
   .stats-strip,
   .three-up,
   .two-up,
@@ -844,20 +845,20 @@ main {
   .footer {
     grid-template-columns: 1fr;
   }
-  
+ 
   h1 {
     max-width: none;
   }
-  
+ 
   h2 {
     max-width: none;
   }
-  
+ 
   /* permitir que a frase quebre em telas pequenas */
   #cultura .section-heading h2 {
     white-space: normal;
   }
-  
+ 
   .feature-card,
   .media-card,
   .food-card,
@@ -868,5 +869,227 @@ main {
   .about-image-card,
   .about-info-card {
     border-radius: 20px;
+  }
+}
+
+/* --- NOVO: Ajustes específicos para mobile (telas menores que 480px) --- */
+@media (max-width: 480px) {
+  /* Reduz margin/padding excessivos */
+  .topbar {
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+  }
+ 
+  .hero-section,
+  .section,
+  .footer {
+    padding: 16px;
+    border-radius: 16px;
+  }
+ 
+  main {
+    gap: 16px;
+  }
+ 
+  /* Ajusta fonts para não ficarem grandes demais */
+  h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    max-width: 18ch;
+  }
+ 
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    max-width: 22ch;
+  }
+ 
+  h3 {
+    font-size: 1.1rem;
+  }
+ 
+  .lead,
+  .hero-copy .lead {
+    font-size: 1rem;
+    max-width: 42ch;
+  }
+ 
+  .section-subtitle {
+    font-size: 0.95rem;
+    max-width: 48ch;
+  }
+ 
+  /* Reduz tamanho de elementos */
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+ 
+  .brand strong {
+    font-size: 0.9rem;
+  }
+ 
+  .brand small {
+    font-size: 0.75rem;
+  }
+ 
+  .nav {
+    gap: 8px 12px;
+  }
+ 
+  .nav a {
+    padding-bottom: 1px;
+  }
+ 
+  /* Botões em 1 coluna no mobile muito pequeno */
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+ 
+  .button {
+    width: 100%;
+    padding: 0 16px;
+  }
+ 
+  /* Cards com padding menor */
+  .about-info-card {
+    padding: 18px;
+    gap: 14px;
+    border-radius: 16px;
+  }
+ 
+  .about-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+  }
+ 
+  .about-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+ 
+  .about-info-card h3 {
+    font-size: 1.2rem;
+  }
+ 
+  .info-card,
+  .feature-card,
+  .media-card,
+  .food-card,
+  .tour-card,
+  .map-card,
+  .quiz-card {
+    border-radius: 16px;
+  }
+ 
+  .info-card,
+  .map-card,
+  .quiz-card,
+  .food-card > div,
+  .tour-card > div,
+  .media-card > div,
+  .feature-card > div {
+    padding: 18px;
+  }
+ 
+  /* Stats strip com 2 colunas no mobile pequeno */
+  .stats-strip div {
+    padding: 12px;
+  }
+ 
+  .stats-strip strong {
+    font-size: 1.3rem;
+  }
+ 
+  /* Quiz options em 1 coluna */
+  .quiz-options button {
+    min-height: 48px;
+    padding: 10px 14px;
+    border-radius: 12px;
+  }
+ 
+  .quiz-feedback {
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+ 
+  /* Gallery grid em 2 colunas */
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+ 
+  .gallery-item {
+    border-radius: 14px;
+  }
+ 
+  /* Tourism grid em 1 coluna */
+  .tourism-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  /* About layout em 1 coluna */
+  .about-layout,
+  .map-layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+ 
+  .about-image-card img {
+    min-height: 280px;
+  }
+ 
+  /* Footer em 1 coluna */
+  .footer {
+    padding: 18px;
+    gap: 16px;
+  }
+ 
+  .footer p {
+    font-size: 0.88rem;
+  }
+ 
+  /* Ajusta hero section */
+  .hero-section {
+    min-height: calc(100svh - 80px);
+    padding: 20px;
+  }
+ 
+  .hero-section::before {
+    width: 280px;
+    height: 280px;
+    inset: auto -4% -12% auto;
+  }
+ 
+  .hero-copy {
+    gap: 18px;
+    padding-block: 18px;
+  }
+ 
+  .hero-pill {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+ 
+  .eyebrow,
+  .card-kicker {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+  }
+ 
+  .eyebrow-light {
+    font-size: 0.7rem;
+  }
+ 
+  /* Map static */
+  .map-static {
+    border-radius: 16px;
+  }
+ 
+  .inline-image {
+    margin-top: 14px;
+    border-radius: 14px;
   }
 }
