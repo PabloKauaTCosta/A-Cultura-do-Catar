@@ -175,8 +175,6 @@ app.innerHTML = `
     </a>
 
     <nav class="nav">
-      <a href="#sobre">Sobre</a>
-      <a href="#cultura">Cultura</a>
       <a href="#quiz">Quiz</a>
     </nav>
   </header>
