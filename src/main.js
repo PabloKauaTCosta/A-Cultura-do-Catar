@@ -329,11 +329,11 @@ app.innerHTML = `
         </article>
 
         <article class="food-card reveal">
-          <img src="${hareesImg}" alt="Harees, mingau de trigo e carne servido em uma tigela" />
+          <img src="${babaganucheImg}" alt="Babaganuche, Pasta cremosa e defumada de berinjela" />
           <div>
             <p class="card-kicker">CONFORTO</p>
-            <h3>Harees</h3>
-            <p>Trigo e carne cozidos lentamente até formar um mingau espesso, muito apreciado durante o Ramadã.</p>
+            <h3>Babaganuche</h3>
+            <p>Pasta cremosa e defumada. É feito basicamente de berinjela assada ou grelhada, tahine (pasta de gergelim), alho, suco de limão e azeite.</p>
           </div>
         </article>
 
