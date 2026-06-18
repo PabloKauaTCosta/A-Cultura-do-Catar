@@ -329,7 +329,7 @@ app.innerHTML = `
         </article>
 
         <article class="food-card reveal">
-          <img src="${babaganucheImg}" alt="Babaganuche, Pasta cremosa e defumada de berinjela" />
+          <img src="${babaganucheImg}" alt="Babaganuche, pasta cremosa e defumada de berinjela." />
           <div>
             <p class="card-kicker">CONFORTO</p>
             <h3>Babaganuche</h3>
