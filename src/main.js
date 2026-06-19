@@ -166,19 +166,6 @@ const quizQuestions = [
 const app = document.querySelector('#app')
 
 app.innerHTML = `
-  <header class="topbar topbar-overlay">
-    <a class="brand" href="#inicio" aria-label="Ir para o início">
-      <span class="brand-mark">ق</span>
-      <span>
-        <strong>Catar</strong>
-      </span>
-    </a>
-
-    <nav class="nav">
-      <a href="#quiz">Quiz</a>
-    </nav>
-  </header>
-
   <main>
     <section class="hero-section reveal" id="inicio" style="--hero-image: url('${heroImg}')">
       <div class="hero-overlay"></div>
